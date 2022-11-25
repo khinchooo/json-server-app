@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rest API practice</title>
+</head>
+<body onload="getData()">
+  <ul>
+    <div id="dataList"></div>
+  </ul>
+  <script>
+    function getData() {
+      const list = document.getElementById("dataList");
+      list.innerHTML = "";
+      const xhr = new XMLHttpRequest();
+      xhr.open("GET", "http://localhost:3000/sites", true);
+      xhr.onload = function (e) {
+        if (xhr.readyState === 4) {
+          if (xhr.status == 200) {
+            const sites = JSON.parse(xhr.responseText);
+            for (let i = 0; i < sites.length; i++) {
+              list.innerHTML += `<li><a href="${sites[i].url}">${sites[i].id} ${sites[i].name}</a></li>`;    
+            }
+          }
+        } else {
+          console.error(xhr.statusText);
+        }
+      };
+      xhr.onerror = function () {
+        console.error(xhr.statusText);
+      };
+      xhr.send(null);
+    }
+  </script>
+</body>
+</html>

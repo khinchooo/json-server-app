@@ -1,0 +1,29 @@
+{
+  "sites": [
+    {
+      "name": "Angular",
+      "url": "https://angular.io/",
+      "id": 1
+    },
+    {
+      "name": "React",
+      "url": "https://react.org/",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Vue3",
+      "url": "https://vuejs.org/"
+    },
+    {
+      "name": "YahooJP",
+      "url": "https://www.yahoo.co.jp/",
+      "id": 4
+    },
+    {
+      "name": "Google ",
+      "url": "https://www.google.com/",
+      "id": 5
+    }
+  ]
+}

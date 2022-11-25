@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rest API CRUD</title>
+</head>
+<body>
+  <h3>Create data</h3>
+  <div><input type="text" id="siteName" placeholder="Site Name"></div>
+  <div><input type="text" id="siteURL" placeholder="Site URL"></div>
+  <button onclick="createData()">Create</button>
+  <hr>
+  <h3>Read data</h3>
+  <button onclick="readData()">Read</button>
+  <ul><div id="dataList"></div></ul>
+  <hr>
+  <h3>Update data</h3>
+  <div><input type="text" id="updateId" placeholder="ID"></div>
+  <div><input type="text" id="updateName" placeholder="Site Name"></div>
+  <div><input type="text" id="updateURL" placeholder="Site URL"></div>
+  <button onclick="updateData()">Update</button>
+  <hr>
+  <h3>Delete data</h3>
+  <div><input type="text" id="deleteId" placeholder="ID"></div>
+  <button onclick="deleteData()">Delete</button>
+  <script src="myscript.js">
+
+  </script>
+</body>
+</html>
